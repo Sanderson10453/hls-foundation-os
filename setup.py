@@ -9,7 +9,7 @@ setup(
     license="Apache 2",
     long_description=open("README.md").read(),
     install_requires=[
-        "mmsegmentation @ git+https://github.com/open-mmlab/mmsegmentation.git@186572a3ce64ac9b6b37e66d58c76515000c3280",
+        "mmsegmentation @ file:////C:/Users/Spens/Documents/Work + Internship Materials/Consulting/GullahGeechee",
         "rasterio",
         "rioxarray",
         "einops",
