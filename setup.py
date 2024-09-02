@@ -9,7 +9,7 @@ setup(
     license="Apache 2",
     long_description=open("README.md").read(),
     install_requires=[
-        "mmsegmentation @ file:////C:/Users/Spens/Documents/Work + Internship Materials/Consulting/GullahGeechee",
+        "mmsegmentation @ file:///C:/Users/Spens/Documents/GullahGeechee_0324/mmsegmentation",
         "rasterio",
         "rioxarray",
         "einops",
