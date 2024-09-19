@@ -132,7 +132,7 @@ def inference_on_file(model, target_image, output_image, custom_test_pipeline):
         result[0] = np.where(mask == 1, -1, result[0])
 
         ##### Save file to disk
-        meta["count"] = 1
+        # meta["count"] = 1
         meta["dtype"] = "int16"
         meta["compress"] = "lzw"
         meta["nodata"] = -1

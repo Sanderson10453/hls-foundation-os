@@ -273,6 +273,7 @@ class LoadGeospatialImageFromFile(object):
     def __call__(self, results):
         if results.get("img_prefix") is not None:
             filename = osp.join(results["img_prefix"], results["img_info"]["filename"])
+    
         else:
             filename = results["img_info"]["filename"]
         img = open_tiff(filename)

@@ -2,22 +2,23 @@
 #This Script runs the inference - just change the params
 ##Declaring stuff
 #Config
-prithvi_config="../.././Work + Intership Materials/Consulting/GullahGeechee/Prithvi-100M-sen1floods11/sen1floods11_Prithvi_100M.py"
+prithvi_config=.././Prithvi-100M-sen1floods11/sen1floods11_Prithvi_100M.py
 
 #Checkpt
-prithvi_checkpt="../.././Work + Intership Materials/Consulting/GullahGeechee/Prithvi-100M-sen1floods11/sen1floods11_Prithvi_100M.pth"
+prithvi_checkpt=.././Prithvi-100M-sen1floods11/sen1floods11_Prithvi_100M.pth
 
 #input
-image_in="../.././Work + Intership Materials/Consulting/GullahGeechee/Gullah-Geechee/HLS_Images/Experienced_Flood_Days/Composite/Composite_2023243_clippedagain.tif"
+image_in=.././Experienced_Flood_Days/Composite/Tests/
 
 
 #output
-image_out="../.././Work + Intership Materials/Consulting/GullahGeechee/Gullah-Geechee/HLS_Images/Experienced_Flood_Days/Composite/Processed_Images/Comp2023243_clipagain.tif"
+image_out=.././Experienced_Flood_Days/Composite/Processed_Images/
+
 #Activating python env
-env_activate="../.conda/Lib/venv/scripts/common/activate"
+env_activate=../.conda/Lib/venv/scripts/common/activate
 source $env_activate
 echo "Venv Activated"
 
 #Grabbing Contents of Bash config
 # source .bashrc
-python ./model_inference.py --config $prithvi_config  --ckpt $prithvi_checkpt --input $image_in  --output $image_out 
+.././.conda/python.exe ./model_inference.py -config $prithvi_config  -ckpt $prithvi_checkpt -input $image_in  -output $image_out -device 'cpu' -bands 0 1 2 3 4 5
